@@ -4,7 +4,7 @@
 
 [開啟地圖・免登入預覽](https://miles.edgelessblade.com/) · [公開近期機位](https://miles.edgelessblade.com/availability) · [更新紀錄](CHANGELOG.md) · [Threads](https://www.threads.com/@edgeless.blade)
 
-![圓角機場選單，可直接從航班表切換出發地與目的地](images/airport-menu.png)
+![圓角機場選單，可直接從航班表切換出發地與目的地](images/airport-menu-v2.png)
 
 *畫面為功能展示；截圖中的日期、席位與價格不代表目前庫存。*
 
