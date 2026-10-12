@@ -25,6 +25,12 @@
 | 多人同行，不想逐筆找足夠席位 | 勾選 2、3 或 4 位以上，篩選結果與翻頁同步。 |
 | 手機滑動被地圖攔住 | 機位卡放在地圖上方；需要移動地圖時才開啟操作模式。 |
 
+## 專案視覺
+
+<img src="images/project-illustration.png" alt="Alaska 里程神器宣傳插圖：台灣與東京航線、經濟艙及商務艙點數" width="480">
+
+*品牌宣傳示意圖，非網站精確截圖；地圖、小字與機位資訊請以正式網站為準。*
+
 ## For travelers
 
 Explore Alaska award seats to and from Taiwan. The interactive map offers a free preview without an account. Sign in for a 60-day flight list; Pro extends the window to 330 days. Filter by cabin and minimum seats, or change airports directly in the route title.
