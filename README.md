@@ -2,13 +2,16 @@
 
 **先看地圖，再找適合你的機位。** 由 [重劍無鋒 / edgelessblade](https://edgelessblade.com/) 開發維護的阿拉斯加里程機位查詢工具，整理台灣出發與返回台灣的經濟艙、商務艙機位。
 
-[開啟地圖・免登入預覽](https://miles.edgelessblade.com/) · [公開近期機位](https://miles.edgelessblade.com/availability) · [更新紀錄](CHANGELOG.md) · [Threads](https://www.threads.com/@edgeless.blade)
+[近期機位・免登入](https://miles.edgelessblade.com/recent) · [開啟地圖・免登入預覽](https://miles.edgelessblade.com/) · [公開近期機位](https://miles.edgelessblade.com/availability) · [更新紀錄](CHANGELOG.md) · [Threads](https://www.threads.com/@edgeless.blade)
 
 ![圓角機場選單，可直接從航班表切換出發地與目的地](images/airport-menu-v2.png)
 
 *畫面為功能展示；截圖中的日期、席位與價格不代表目前庫存。*
 
 ## 不登入，也能先看看
+
+**[分享近期機位](https://miles.edgelessblade.com/recent)**：沿用網站列表，公開未來 7 天、4 席以上機位，可切換台灣出發／返回台灣與經濟艙／商務艙。包括直飛與轉機；機場及其他篩選鎖定，點航班詳情需要登入。
+
 
 - 大地圖直接開放，點選航點可查看有限機位預覽。
 - 每條航線、每種艙等提供未來 60 天內最近三個不同日期；不足三個照實顯示。

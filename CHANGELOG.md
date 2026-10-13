@@ -2,6 +2,13 @@
 
 Changes explain the user problem and the resulting behavior. Live flight data stays on the website. Subsequent releases are recorded in [the release journal](releases/).
 
+## 2026-10-13 — 訪客近期機位
+
+- 新增 `/recent` 分享入口，預設台灣出發、商務艙。
+- 訪客可看未來 7 天、4 席以上機位，切換出發／回程及艙等，包含直飛與轉機。
+- 沿用近期機位版面，鎖定機場、日期、席位與直飛篩選；點航班先登入。
+- 後端強制公開範圍，保留完整航班 API 登入限制與限流。大地圖預覽維持原有範圍。
+
 ## 2026-10-13 — 公開作品展示與讀取入口
 
 - 建立 GitHub 作品頁，連結免費地圖預覽、公開 HTML 與 JSON 機位摘要。
