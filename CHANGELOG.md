@@ -2,6 +2,25 @@
 
 Changes explain the user problem and the resulting behavior. Live flight data stays on the website. Subsequent releases are recorded in [the release journal](releases/).
 
+## 2026-10-13 — 讓查機位更順：減少等待，保留閱讀位置
+
+- **只載入需要的資料：** 航班列表與詳情不再先取得整張地圖資料；機場選單重用已取得的選項，減少重複請求。
+- **載入更多，不打斷閱讀：** 新航班接在列表下方，保留原有航班與已展開的內容。按鈕顯示載入狀態、目前筆數，全部載完後顯示完成提示。
+- **登入流程保持直接：** 未登入點航班，立即顯示登入提示。登入後由使用者再點選，不自動跳轉。
+- **清楚的回應：** 點選地圖航點時，先顯示航點標題與簡單載入提示，再補上機位資料。
+
+機位資料每日更新，實際機位以航空公司確認為準。
+
+### Simpler browsing, less repeated work
+
+Flight lists and details now skip the extra map request. Airport menus reuse their options. Load more adds flights below the existing rows and keeps expanded details open. Guests see the login prompt immediately and choose their flight again after signing in.
+
+Flight data is updated daily. Actual availability is subject to airline confirmation. Membership checks and data-access limits remain in place. These changes reduce repeated work; no measured speed increase is claimed.
+
+![載入更多航班與目前筆數，原有航班保留在列表中](images/load-more.jpg)
+
+*正式網站功能截圖；其中機位與價格不代表目前庫存。*
+
 ## 2026-10-13 — 訪客近期機位
 
 - 新增 `/recent` 分享入口，預設台灣出發、商務艙。
