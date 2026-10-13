@@ -26,6 +26,14 @@
 
 [查看本次更新](CHANGELOG.md) · [直接查看近期機位](https://miles.edgelessblade.com/recent)
 
+## 為使用者打磨每個細節
+
+按下按鈕後，不該讓人猜測網站有沒有收到操作。我們讓艙等切換立即顯示回饋，清楚說明正在載入什麼；等待時保持版面穩定，出錯時提供重試。連續改變選擇，以最後一次操作為準。
+
+這些細節和追加式「載入更多」、直接的登入提示一起，讓人能專心找機位。設計會持續改善，方向是清楚、輕量、容易操作。
+
+**Clear feedback, steady layouts, and a way to recover.** We keep improving the small interactions that help people use the tool with confidence.
+
 ## 為什麼這樣設計
 
 | 問題 | 設計 |

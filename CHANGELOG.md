@@ -2,6 +2,24 @@
 
 Changes explain the user problem and the resulting behavior. Live flight data stays on the website. Subsequent releases are recorded in [the release journal](releases/).
 
+## 2026-10-14 — 讓每次操作都有回應
+
+切換艙等後，如果畫面沒有反應，人會懷疑自己沒按到，或不知道還要等多久。這次從這個小細節開始，讓查機位的過程更安心。
+
+- **按下就有回應：** 艙等按鈕立即呈現選中狀態，旁邊的機位總數改為「查詢中」。
+- **等待有說明：** 航班區上方以淡綠圓角提示條顯示正在載入哪個艙等，搭配小型轉圈。
+- **畫面保持穩定：** 載入期間保留原有航班的位置，淡化並暫停互動，避免把上一個艙等的資料當成新結果。
+- **最後一次選擇優先：** 連續切換時，較慢的舊請求不會蓋過新的選擇。
+- **失敗有出口：** 查詢失敗或等待過久時，提供清楚的重試按鈕，不讓人一直看著轉圈。
+
+設計持續打磨的方向很簡單：讓使用者知道自己的操作已被接收、目前發生什麼事，以及下一步能做什麼。提示沿用網站配色，保留鍵盤操作與減少動態效果的支援，不為了回饋額外增加資料請求。會員權限仍由後端驗證。
+
+### Clear feedback for human users
+
+When people change cabins, the page should respond at once. A small loading message says what is happening. The previous flights stay in place but cannot be clicked while new results load. The latest choice wins, and errors offer a way to try again.
+
+We are improving the experience through small, practical changes: less guessing, steady layouts, and clear next steps. Loading feedback does not add data requests or replace server-side membership checks. Fast responses, delayed responses, errors, timeouts, rapid switching, and a mobile layout were checked. This is an interaction improvement, not a claim of a measured speed gain.
+
 ## 2026-10-13 — 讓查機位更順：減少等待，保留閱讀位置
 
 - **只載入需要的資料：** 航班列表與詳情不再先取得整張地圖資料；機場選單重用已取得的選項，減少重複請求。
