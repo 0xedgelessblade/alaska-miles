@@ -2,6 +2,33 @@
 
 Changes explain the user problem and the resulting behavior. Live flight data stays on the website. Subsequent releases are recorded in [the release journal](releases/).
 
+## 2026-10-15 — 機型資訊：讓每一段航程都有正確對應
+
+除了出發時間和里程點數，旅客也會想知道搭乘什麼飛機。我們把機型放在航班號旁，用低調的淡綠圓角標籤呈現；轉機則在展開詳情後逐段顯示，不把某一段的機型當成整趟行程。
+
+### 這次處理的難題
+
+- **來源名稱不夠精細，也不能猜：** 保留 `Airbus A321neo/Lr/Xlr` 的原始寫法；只有 `Airbus A350` 的資料也不擅自補成 -900 或 -1000。
+- **轉機可能換飛機：** 每段分別保存起訖機場、航班號與機型，驗證航段首尾及轉機點能連接；不單靠轉機次數猜航段結構。
+- **中間時間可能缺失：** 允許來源沒有提供的時間為 null，不補造抵達時間、起飛時間或轉機等待時間。已提供的時間則核對時區、先後順序與整體行程。
+- **舊資料也要正常使用：** 機型和航段是選填欄位。沒有資料就維持原本畫面，航班ID的計算方式不變，不因補上機型而產生重複航班。
+- **資料要真正存得下來：** 同步更新匯入驗證與保存欄位，避免畫面做好了，機型卻在匯入途中被忽略。
+- **資訊增加，畫面不能變擁擠：** 保留原本卡片層級；轉機細節展開才顯示，手機版的長機型名稱可換行。
+
+### 完成狀態
+
+網站與匯入服務的功能已部署，96項自動測試通過，桌面與手機版以本機示例驗收。另已逐筆驗證42,315筆含機型測試資料：原有欄位與航班ID未變，驗證沒有錯誤。
+
+**目前正式航班資料尚未匯入這些機型欄位。** 以上描述的是已部署的功能與完成的測試，不代表所有正式航班已經顯示機型。實際機型也可能調整，以航空公司確認為準。
+
+### Aircraft information without guesswork
+
+Direct flights can show a small aircraft label beside the flight number. Connecting itineraries show aircraft by segment in expanded details. We preserve source wording, allow missing timestamps, validate connections and time order, and keep existing flight IDs unchanged.
+
+The importer now retains the optional aircraft and segment fields. Old snapshots remain compatible. The feature is deployed and the aircraft test snapshot has passed validation; production aircraft data is still awaiting import. This update does not claim a particular seat layout or cabin product from an aircraft name alone.
+
+機位資料每日更新，實際機位以航空公司確認為準。
+
 ## 2026-10-14 — 讓每次操作都有回應
 
 切換艙等後，如果畫面沒有反應，人會懷疑自己沒按到，或不知道還要等多久。這次從這個小細節開始，讓查機位的過程更安心。
